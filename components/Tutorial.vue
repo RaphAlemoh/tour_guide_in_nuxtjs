@@ -383,9 +383,11 @@
         <div class="row justify-end">
           <div class="w-full lg:w-1/2">
             <div class="about_content mx-4 pt-11 lg:pt-15 lg:pb-15">
-              <div class="section_title pb-9">
-                <h5 class="sub_title">Why Choose Us</h5>
-                <h4 class="main_title">Your Goal is Our Achievement</h4>
+              <div data-v-step="3">
+                <div class="section_title pb-9">
+                  <h5 class="sub_title">Why Choose Us</h5>
+                  <h4 class="main_title">Your Goal is Our Achievement</h4>
+                </div>
               </div>
               <!-- section title -->
               <p>
@@ -446,9 +448,11 @@
       <div class="container">
         <div class="row justify-center">
           <div class="w-full lg:w-1/2">
-            <div class="section_title text-center pb-6">
-              <h5 class="sub_title">What We Do</h5>
-              <h4 class="main_title">Our Services</h4>
+            <div data-v-step="5">
+              <div class="section_title text-center pb-6">
+                <h5 class="sub_title">What We Do</h5>
+                <h4 class="main_title">Our Services</h4>
+              </div>
             </div>
             <!-- section title -->
           </div>
@@ -714,9 +718,11 @@
       <div class="container">
         <div class="row justify-center">
           <div class="w-ull lg:w-1/2">
-            <div class="section_title text-center pb-6">
-              <h5 class="sub_title">Works</h5>
-              <h4 class="main_title">Some of Our Recent Works</h4>
+            <div data-v-step="6">
+              <div class="section_title text-center pb-6">
+                <h5 class="sub_title">Works</h5>
+                <h4 class="main_title">Some of Our Recent Works</h4>
+              </div>
             </div>
             <!-- section title -->
           </div>
@@ -903,9 +909,11 @@
       <div class="container">
         <div class="row justify-center">
           <div class="w-full lg:w-1/2">
-            <div class="section_title text-center pb-6">
-              <h5 class="sub_title">Pricing Plans</h5>
-              <h4 class="main_title">Choose Your Plan</h4>
+            <div data-v-step="7">
+              <div class="section_title text-center pb-6">
+                <h5 class="sub_title">Pricing Plans</h5>
+                <h4 class="main_title">Choose Your Plan</h4>
+              </div>
             </div>
             <!-- section title -->
           </div>
@@ -1198,9 +1206,11 @@
       <div class="container">
         <div class="row justify-center">
           <div class="w-full lg:w-1/2">
-            <div class="section_title text-center pb-6">
-              <h5 class="sub_title">Team</h5>
-              <h4 class="main_title">Meet Our Team Members</h4>
+            <div data-v-step="8">
+              <div class="section_title text-center pb-6">
+                <h5 class="sub_title">Team</h5>
+                <h4 class="main_title">Meet Our Team Members</h4>
+              </div>
             </div>
             <!-- section title -->
           </div>
@@ -1399,9 +1409,11 @@
       <div class="container">
         <div class="row justify-center">
           <div class="w-full lg:w-1/2">
+            <div data-v-step="9">
             <div class="section_title text-center pb-6">
               <h5 class="sub_title">Blog</h5>
               <h4 class="main_title">From The Blog</h4>
+            </div>
             </div>
             <!-- section title -->
           </div>
@@ -1777,6 +1789,7 @@
           <!-- row -->
         </div>
         <!-- footer widget -->
+        <div data-v-step="10">
         <div
           class="
             footer_copyright
@@ -1830,6 +1843,7 @@
           </div>
           <!-- footer copyright content -->
         </div>
+        </div>
         <!-- footer copyright -->
       </div>
       <!-- container -->
@@ -1853,24 +1867,110 @@ export default {
     return {
       steps: [
         {
-          target: "#v-step-0", // We're using document.querySelector() under the hood
+          target: "#v-step-0",
           header: {
-            title: "Get Started",
+            title: "Get Started with our Tour guide",
           },
-          content: `Discover <strong>Vue Tour</strong>!`,
+          content: `Discover and explore <strong>our amazing features</strong>!`,
         },
+
         {
           target: ".v-step-1",
-          content: "An awesome plugin made with Vue.js!",
+          header: {
+            title: "Navigation Items",
+          },
+          content: "An awesome navigation menu to access features",
         },
         {
           target: '[data-v-step="2"]',
+          header: {
+            title: "Explore our Work Process!!!",
+          },
           content:
-            "Try it, you'll love it!<br>You can put HTML in the steps and completely customize the DOM to suit your needs.",
+            "Try it, you'll love it!<br>You can reach out to suit your needs.",
+          params: {
+            placement: "bottom",
+          },
+        },
+        {
+          target: '[data-v-step="3"]',
+          header: {
+            title: "Your best choice!!!",
+          },
+          content: "Try it, your goal is our choice",
+          params: {
+            placement: "right",
+          },
+        },
+
+        {
+          target: '[data-v-step="5"]',
+          header: {
+            title: "Our services!",
+          },
+          content: "Access top notch services",
           params: {
             placement: "top",
           },
         },
+
+        {
+          target: '[data-v-step="6"]',
+          header: {
+            title: "Our works!!!",
+          },
+          content: "Track record of deliverables",
+          params: {
+            placement: "right",
+          },
+        },
+
+        {
+          target: '[data-v-step="7"]',
+          header: {
+            title: "Our Flexible Pricing plans!!!",
+          },
+          content: "Choose the plans that works for you!!!",
+          params: {
+            placement: "right",
+          },
+        },
+
+        {
+          target: '[data-v-step="8"]',
+          header: {
+            title: "Our Team",
+          },
+          content: "We've got amazing team members!!!",
+          params: {
+            placement: "right",
+          },
+        },
+
+        {
+          target: '[data-v-step="9"]',
+          header: {
+            title: "Our Blog",
+          },
+          content: "We've got top notch articles and features explanation in here!!!",
+          params: {
+            placement: "right",
+          },
+        },
+
+
+        {
+          target: '[data-v-step="10"]',
+          header: {
+            title: "Our Team",
+          },
+          content: "We've got amazing team members!!!",
+          params: {
+            placement: "top",
+          },
+        },
+
+
       ],
     };
   },
